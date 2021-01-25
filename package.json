@@ -1,0 +1,19 @@
+{
+  "name": "sn-client-hunt",
+  "version": "1.0.0",
+  "description": "sn-client-hunt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sumanthreddy1233/sn-client-hunt.git"
+  },
+  "author": "Sumanth reddy Naidu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sumanthreddy1233/sn-client-hunt/issues"
+  },
+  "homepage": "https://github.com/sumanthreddy1233/sn-client-hunt#readme"
+}
