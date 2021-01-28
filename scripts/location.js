@@ -1,5 +1,5 @@
 // import default object with a local camelCase name
-import locationsArray from '../init-location.js';
+import locationsArray from '../init-locations.js';
 
 const inside = (device, bounds) => {
   // console.log(`CHECKING inside ${bounds.Name}`);
@@ -18,14 +18,6 @@ const inside = (device, bounds) => {
   return ans;
 };
 
-/**
- * Get the location
- * Uses new import / export - be sure to set type="module" in HTML
- * Can be easily added to any web page.
- * Includes GeoLocation API example.
- * @module location/getLocation
- * @author Denise Case
- */
 export default function getLocation() {
   if (!navigator.geolocation) {
     document.querySelector('#error-message').innerHTML =
@@ -41,7 +33,7 @@ export default function getLocation() {
       (position) => {
         document.querySelector('#device-lat').innerHTML = '';
         document.querySelector('#device-long').innerHTML = '';
-        document.querySelector('#locationAnswer').innerHTML = '?';
+        document.querySelector('#locationAnswer').innerHTML = '';
 
         if (position === undefined) {
           document.querySelector('#error-message').innerHTML =
