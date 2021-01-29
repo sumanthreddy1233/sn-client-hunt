@@ -1,8 +1,8 @@
 export default [
   {
       Name: '1121 n college dr',
-      Latitude: 40.355943374314414, 
-      Longitude:-94.8817866361201
+      Latitude: 40.356016967350314 ,
+      Longitude:-94.88179733150518
       
   },
   {

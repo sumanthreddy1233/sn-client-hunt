@@ -29,13 +29,15 @@ async function getLocation() {
 async function locationHandler() {
     let locText = await getLocation();
     currentlat = locText.coords.latitude;
-    document.getElementById("device-lat").innerHTML = "Ltitude: " + currentlat;
+    document.getElementById("device-lat").innerHTML = "Latitude: " + currentlat;
     currentlon = locText.coords.longitude;
     document.getElementById("device-long").innerHTML = "Longitude: " + currentlon;
 
     locationsArray.forEach(function (value) {
         if (isInside(value.Latitude, value.Longitude)) {
             document.getElementById("locationAnswer").innerHTML = value.Name;
+            let utterance = new SpeechSynthesisUtterance("Hi from Sumanth, Congratulations!!You have reached "+value.Name);
+            speechSynthesis.speak(utterance);
             error = false;
         }
     });
@@ -44,6 +46,8 @@ async function locationHandler() {
 
     if(error) {
         document.getElementById("error-message").innerHTML = "Out of range.";
+        let utterance = new SpeechSynthesisUtterance("You are still out of range of location");
+            speechSynthesis.speak(utterance);
     } else {
         document.getElementById("error-message").innerHTML = "";
     }
